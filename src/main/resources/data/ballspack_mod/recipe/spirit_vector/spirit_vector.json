@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:golden_boots"
+    },
+    "b": {
+      "item": "minecraft:blaze_rod"
+    },
+    "a": {
+      "item": "spirit_vector:anima_core_bird"
+    }
+  },
+  "pattern": [
+    "a a",
+    "bBb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "spirit_vector:spirit_vector"
+  }
+}

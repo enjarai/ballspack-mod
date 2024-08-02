@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "f": {
+      "item": "minecraft:feather"
+    },
+    "b": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "pattern": [
+    " f ",
+    "fbf",
+    " f "
+  ],
+  "result": {
+    "count": 1,
+    "id": "spirit_vector:anima_core_bird"
+  }
+}
