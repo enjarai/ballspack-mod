@@ -3,6 +3,8 @@ package dev.enjarai.ballspackmod;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
@@ -15,6 +17,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.GameRules;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import symbolics.division.spirit.vector.SpiritVectorItems;
@@ -48,6 +51,9 @@ public class BallspackMod implements ModInitializer, ClientModInitializer {
             Identifier.ofVanilla("chests/trial_chambers/reward_rare"),
             Identifier.ofVanilla("chests/trial_chambers/reward_ominous_rare")
     );
+    public static final GameRules.Key<GameRules.BooleanRule> ENTER_END_GAMERULE =
+            GameRuleRegistry.register("ballspack_mod:preventEndEntering", GameRules.Category.MISC,
+                    GameRuleFactory.createBooleanRule(true));
 
     @Override
     public void onInitialize() {
