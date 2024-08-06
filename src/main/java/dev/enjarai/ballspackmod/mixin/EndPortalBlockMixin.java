@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,17 +26,10 @@ public class EndPortalBlockMixin {
             cancellable = true
     )
     public void preventEndering(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci){
-        if (world.getGameRules().getBoolean(BallspackMod.ENTER_END_GAMERULE)) {
-            if (world instanceof ServerWorld && entity instanceof PlayerEntity) {
-
-                world.getPlayers().forEach(playerEntity -> {
-                    playerEntity.sendMessage(entity.getDisplayName().copy().append(" tried entering the end. Laugh at this user."), true);
-                });
-                // Play the alert to everyone in the world :clueless:
-                world.playSound(null, pos, SoundEvents.ENTITY_SKELETON_HORSE_DEATH, SoundCategory.PLAYERS, 0.2f, 0.5f);
+        if (!world.isClient() && world.getGameRules().getBoolean(BallspackMod.PREVENT_END_GAMERULE)) {
+            if (entity instanceof PlayerEntity player) {
+                player.sendMessage(Text.of("The End is currently closed."), true);
             }
-
-            world.setBlockState(pos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL);
 
             ci.cancel();
         }

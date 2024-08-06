@@ -51,7 +51,7 @@ public class BallspackMod implements ModInitializer, ClientModInitializer {
             Identifier.ofVanilla("chests/trial_chambers/reward_rare"),
             Identifier.ofVanilla("chests/trial_chambers/reward_ominous_rare")
     );
-    public static final GameRules.Key<GameRules.BooleanRule> ENTER_END_GAMERULE =
+    public static final GameRules.Key<GameRules.BooleanRule> PREVENT_END_GAMERULE =
             GameRuleRegistry.register("ballspack_mod:preventEndEntering", GameRules.Category.MISC,
                     GameRuleFactory.createBooleanRule(true));
 

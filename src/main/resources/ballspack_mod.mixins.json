@@ -3,6 +3,7 @@
   "package": "dev.enjarai.ballspackmod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EnderEyeItemMixin",
     "EndPortalBlockMixin"
   ],
   "injectors": {
