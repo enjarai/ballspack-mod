@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "EnderEyeItemMixin",
-    "EndPortalBlockMixin"
+    "EndPortalBlockMixin",
+    "spiritvector.EntityMixinSquared"
   ],
   "injectors": {
     "defaultRequire": 1
