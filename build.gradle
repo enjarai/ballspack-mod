@@ -38,6 +38,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "maven.modrinth:spirit-vector:1.7.0"
+	modImplementation "maven.modrinth:frozenlib:1.8.2-mc1.21"
 }
 
 processResources {
