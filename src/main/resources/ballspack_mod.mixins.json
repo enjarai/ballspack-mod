@@ -4,7 +4,9 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "EnderEyeItemMixin",
-    "EndPortalBlockMixin"
+    "EndPortalBlockMixin",
+    "frozenlib.FadingDiskTagFeatureMixin",
+    "spiritvector.EntityMixinSquared"
   ],
   "injectors": {
     "defaultRequire": 1
