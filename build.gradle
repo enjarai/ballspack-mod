@@ -39,6 +39,7 @@ dependencies {
 
 	modImplementation "maven.modrinth:spirit-vector:1.7.0"
 	modImplementation "maven.modrinth:frozenlib:1.8.2-mc1.21"
+	modImplementation "maven.modrinth:transmog:fabric-1.4.2+1.21"
 }
 
 processResources {
