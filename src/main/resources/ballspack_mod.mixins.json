@@ -5,8 +5,7 @@
   "mixins": [
     "EnderEyeItemMixin",
     "EndPortalBlockMixin",
-    "frozenlib.FadingDiskTagFeatureMixin",
-    "spiritvector.EntityMixinSquared"
+    "frozenlib.FadingDiskTagFeatureMixin"
   ],
   "injectors": {
     "defaultRequire": 1
